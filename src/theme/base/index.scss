@@ -1,0 +1,90 @@
+/*custom  variables*/
+//$--colors: (
+//  'primary': (
+//    'base': red
+//  ),
+//  'success': (
+//    'base': #21ba45
+//  ),
+//  'warning': (
+//    'base': #f2711c
+//  ),
+//  'danger': (
+//    'base': #db2828
+//  ),
+//  'error': (
+//    'base': #db2828
+//  ),
+//  'info': (
+//    'base': #42b8dd
+//  )
+//);
+
+//@forward "./var.scss" with (
+//  $colors: $--colors
+//);
+
+/*import dark theme 起作用*/
+//@use "./css-vars.scss" as *;
+html.base-theme {
+  /*element-plus section */
+  --el-menu-active-color: #409eff;
+  --el-menu-text-color: #bfcbd9;
+  --el-menu-hover-text-color: var(--el-color-primary);
+  --el-menu-bg-color: #304156;
+  --el-menu-hover-bg-color: #263445;
+  --el-menu-item-height: 56px;
+  --el-menu-border-color: none;
+  /*layout section*/
+  //layout
+  --layout-border-left-color: #ddd;
+  //Hamburger
+  --hamburger-color: #2b2f3a;
+  --hamburger-width: 20px;
+  --hamburger-height: 20px;
+  //Sidebar
+  --sidebar-el-icon-size: 20px;
+  --sidebar-logo-background: #2b2f3a;
+  --sidebar-logo-color: #ff9901;
+  --sidebar-logo-width: 32px;
+  --sidebar-logo-height: 32px;
+  --sidebar-logo-title-color: #fff;
+  --side-bar-width: 210px;
+  --side-bar-border-right-color: '#ddd';
+  //close-icon
+  --tags-view-close-icon-hover-background: #b4bccc;
+  --tags-view-close-icon-hover-color: #fff;
+  //AppMain.vue
+  --app-main-padding: 10px;
+  --app-main-background: #fff;
+  //Navbar.vue
+  --nav-bar-height: 50px;
+  --nav-bar-background: #fff;
+  --nav-bar-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  --nav-bar-right-menu-background: #fff;
+
+  //map-tools
+  --map-tools-postion-right:10px;
+  //map-card
+  --map-card-postion-right:110px;
+
+  //layer-list
+  --layer-list-height:250px;
+  --layer-list-width:500px;
+  --layer-list-height-min:30px;
+  --layer-list-height-max:500px;
+  
+
+  //transition 动画
+  //侧边栏切换动画时长
+  --sideBar-switch-duration: 0.2s;
+  //logo切换动画时长
+  --logo-switch-duration: 1.5s;
+  //页面动画时长
+  --page-transform-duration: 0.2s;
+  //面包屑导航动画时长
+  --breadcrumb-change-duration: 0.2s;
+
+  //进度条颜色
+  --pregress-bar-color: #409eff;
+}

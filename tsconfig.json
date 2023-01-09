@@ -1,0 +1,44 @@
+{         //https://blog.csdn.net/zy21131437/article/details/121784420
+  // "files": [],                          //设置files为空,则不会自动扫描默认目录，也就是只会扫描include配置的目录
+  // "extends": "./tsconfig.base.json",    // extends 属性作用是引入其他配置文件，继承配置
+  "compilerOptions": {
+    "target": "ESNext",         // 目标语言的版本,指定ECMAScript目标版本 
+    "useDefineForClassFields": true,
+    "module": "ESNext",         // 生成代码的模板标准
+    "moduleResolution": "Node",
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,  // 允许导入扩展名为“.json”的模块
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,       // 是否忽略所有的声明文件（*.d.ts）类型检查。跳过库检查，解决打包失败
+    "lib": ["ESNext", "DOM"],   // TS需要引用的库，即声明文件，es5 默认引用dom、es5、scripthost,如需要使用es的高级版本特性，通常都需要配置，如es8的数组新特性需要引入"ES2019.Array",
+
+    "allowJs": true,           // 允许TS编译器编译JS，JSX文件
+    "checkJs": true,           // 允许在JS文件中报错，通常与allowJS一起使用
+    "outDir": "./ts-out-dir",   // 输出文件的目录
+    "rootDir": "./",            // 输入文件的根目录(指定编译范围)，用于控制输出目录结构
+    "removeComments": true,     // 移除代码中注释
+    "strict": true,             // 可以理解成书写规范的总开关,
+    // "noImplicitAny": true,                 /* 是否必须写any类型， */
+    "strictNullChecks": false,              /* 不强制验证null类型 */
+    // "strictFunctionTypes": true,           /* 不强制验证函数类型 */
+    // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
+    // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
+    // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
+    // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
+    "noUnusedLocals": false,    // 检查只声明、未使用的局部变量(只提示不报错)
+    "noUnusedParameters": false,// 检查未使用的函数参数(只提示不报错)
+    "baseUrl": "./",            // 解析非相对模块的基地址，默认是当前目录
+    "allowSyntheticDefaultImports": true,// 允许有没有默认导出的模块导入
+
+    "paths": {                  // 模块名到基于 baseUrl 的路径映射的列表
+      "@/*": ["src/*"],
+      "~/*": ["typings/*"]
+    },
+ 
+    "composite": true,          // 是否编译构建引用项目
+  },
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.json", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "typings/**/*.d.ts", "vite.config.ts"],// include 属性作用是指定编译需要编译的文件或目录。
+  "exclude": ["node_modules", "**/dist"]  // exclude 属性作用是指定编译器需要排除的文件或文件夹。
+}
